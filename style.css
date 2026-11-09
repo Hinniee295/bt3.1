@@ -1,0 +1,276 @@
+/* ==========================================
+   CSS TOÀN TRANG & CHUNG
+   ========================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #89bbed;
+    color: #333;
+    margin: 0;
+    padding: 30px 15px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Selector Group */
+h1, h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #173b67;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1769aa;
+    border-bottom: 2px solid #dceaf7;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    position: relative; /* Dùng cho position absolute của nhãn badge */
+}
+
+/* Nhãn Badge góc trên bên phải (CSS Position) */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #ff9800;
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Link & Pseudo-class */
+a {
+    color: #0878c9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #054f85;
+}
+
+/* ==========================================
+   BÀI 1: THÔNG TIN CÁ NHÂN
+   ========================================== */
+/* Selector Class */
+.profile {
+    text-align: center;
+}
+
+/* Selector ID & Bo tròn ảnh */
+#avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #dceaf7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Selector Inline Style cho màu tên */
+.name-text {
+    color: #0e4875;
+}
+
+/* CSS List */
+.hobbies {
+    display: inline-block;
+    text-align: left;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.hobbies li {
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.hobbies li:hover {
+    background-color: #e3f2fd;
+}
+
+/* ==========================================
+   BÀI 2: BẢNG ĐIỂM SINH VIÊN
+   ========================================== */
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #9eabb8;
+    padding: 12px;
+}
+
+th {
+    background: #1769aa;
+    color: white;
+    text-align: center;
+}
+
+/* Căn giữa STT và Điểm */
+tbody td:nth-child(1),
+tbody td:nth-child(3) {
+    text-align: center;
+}
+
+tbody td:nth-child(2) {
+    text-align: left;
+}
+
+/* Dòng chẵn lẻ xen kẽ */
+tbody tr:nth-child(even) {
+    background-color: #f2f7fc;
+}
+
+tbody tr:hover {
+    background-color: #e1f0ff;
+}
+
+.average {
+    background: #d0e5fb !important;
+    font-weight: bold;
+}
+
+.average td {
+    text-align: center !important;
+}
+
+/* ==========================================
+   BÀI 3: FORM ĐĂNG KÝ SINH VIÊN (FLEXBOX)
+   ========================================== */
+.form-group {
+    margin-bottom: 17px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bdc8d2;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+/* Pseudoclass :focus */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 5px rgba(23, 105, 170, 0.3);
+}
+
+/* Sắp xếp Flexbox cho Họ tên + Email trên cùng hàng */
+.flex-row {
+    display: flex;
+    gap: 15px;
+}
+
+.flex-item {
+    flex: 1;
+}
+
+/* Sắp xếp Radio & Checkbox nằm ngang bằng Flexbox */
+.flex-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.choice-group label {
+    font-weight: normal;
+}
+
+.flex-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Căn nút bằng Flexbox */
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #104d80;
+}
+
+.footer {
+    text-align: center;
+    color: #4a5764;
+    margin-top: 25px;
+}
+
+/* HIỂN THỊ TRÊN ĐIỆN THOẠI */
+@media (max-width: 600px) {
+    .flex-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    th, td {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+}
