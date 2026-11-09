@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân - Trần Thanh Huyền</title>
+    <!-- Liên kết tới tệp CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- BÀI 1: THÔNG TIN CÁ NHÂN -->
+    <section class="section profile">
+
+        <h2>1. Thông tin cá nhân</h2>
+
+        <img 
+            class="avatar" 
+            id="avatar" 
+            src="images/anhcuaHuyen.png" 
+            alt="Ảnh đại diện Trần Thanh Huyền"
+        >
+
+        <p class="name-text"><strong>Họ và tên:</strong> Trần Thanh Huyền</p>
+        <p><strong>Ngày sinh:</strong> 29/05/2005</p>
+        <p><strong>Lớp:</strong> Thương Mại Điện Tử 05</p>
+
+        <h3>Sở thích</h3>
+
+        <ul class="hobbies">
+            <li>Nghe nhạc</li>
+            <li>Đọc sách</li>
+            <li>Đi du lịch</li>
+            <li>Mua sắm</li>
+        </ul>
+
+        <p>
+            <strong>Facebook:</strong> 
+            <a href="https://www.facebook.com/thanh.huyen.505092" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                Trần Thanh Huyền
+            </a>
+        </p>
+
+    </section>
+
+    <!-- BÀI 2: BẢNG ĐIỂM SINH VIÊN -->
+    <section class="section table-container">
+        
+        <!-- Nhãn vị trí theo position: absolute -->
+        <span class="badge">BẢNG ĐIỂM</span>
+
+        <h2>2. Bảng điểm sinh viên</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Môn học</th>
+                    <th>Điểm</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>HTML và CSS</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tin học đại cương</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Toán cao cấp</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Tiếng Anh</td>
+                    <td>9.0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Kỹ năng mềm</td>
+                    <td>9.0</td>
+                </tr>
+                <tr class="average">
+                    <td colspan="2">Điểm trung bình</td>
+                    <td>8.4</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- BÀI 3: FORM ĐĂNG KÝ SINH VIÊN -->
+    <section class="section form-container">
+
+        <!-- Nhãn vị trí theo position: absolute -->
+        <span class="badge">ĐĂNG KÝ MỚI</span>
+
+        <h2>3. Form đăng ký sinh viên</h2>
+
+        <form action="#" method="post">
+
+            <div class="form-group flex-row">
+                <div class="flex-item">
+                    <label for="fullname">Họ và tên *</label>
+                    <input 
+                        type="text" 
+                        id="fullname" 
+                        name="fullname" 
+                        placeholder="Nhập họ và tên của bạn" 
+                        required
+                    >
+                </div>
+                <div class="flex-item">
+                    <label for="email">Email *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="example@gmail.com" 
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Nhập mật khẩu"
+                >
+            </div>
+
+            <div class="form-group choice-group">
+                <label>Giới tính</label>
+                <div class="options flex-options">
+                    <label>
+                        <input type="radio" name="gender" value="Nam"> Nam
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Nữ"> Nữ
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Khác"> Khác
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group choice-group">
+                <label>Sở thích</label>
+                <div class="options flex-options">
+                    <label>
+                        <input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="Nghe nhạc"> Nghe nhạc
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="Thể thao"> Thể thao
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="Du lịch"> Du lịch
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="major">Ngành học</label>
+                <select id="major" name="major">
+                    <option value="">-- Chọn ngành học --</option>
+                    <option value="CNTT">Công nghệ thông tin</option>
+                    <option value="Kinh tế">Kinh tế</option>
+                    <option value="Điện tử">Điện tử</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="note">Ghi chú</label>
+                <textarea 
+                    id="note" 
+                    name="note" 
+                    placeholder="Nhập ghi chú của bạn..."
+                ></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Gửi đăng ký</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <p class="footer">
+        Sinh viên: Trần Thanh Huyền - Lớp Thương Mại Điện Tử 05
+    </p>
+
+</div>
+
+</body>
+</html>
